@@ -2,7 +2,7 @@
 A curated collection of free/open-source cybersecurity tools I have explored.   This repository serves as my personal reference guide and demonstrates hands-on familiarity with industry-standard tools.
 This repository demonstrates my familiarity with essential tools used in network security, reconnaissance, web application testing, forensics, and more. Perfect for Security+ graduates and aspiring SOC Analysts, Penetration Testers, or Security Engineers.
 
-## Tools Covered (18)
+## Tools Covered (10)
 
 | Category              | Tool                    | Status     |
 |-----------------------|-------------------------|------------|

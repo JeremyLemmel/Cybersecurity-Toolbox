@@ -78,15 +78,44 @@ Wireshark proficiency comes from reading real (or realistic) traffic, not memori
 
 ## Common Filters & Commands
 
-```bash
-# Capture filter examples (applied during capture)
-tcp port 80 or tcp port 443
-host 192.168.1.105
-not arp and not icmp
+### Capture Filters (set before capture starts)
 
-# Display filter examples (applied after capture)
-http
-dns
-tcp.port == 443
-http.request.method == "POST"
-frame contains "password"
+```
+# Capture traffic only to/from a specific host
+host 192.168.1.5
+
+# Capture only HTTP (port 80) traffic
+tcp port 80
+
+# Capture traffic on a specific subnet
+net 192.168.1.0/24
+```
+
+### Display Filters (applied after capture, in the GUI filter bar)
+
+```
+# Show only HTTP requests
+http.request
+
+# Show only SYN packets (connection attempts)
+tcp.flags.syn==1 && tcp.flags.ack==0
+
+# Show traffic to/from a specific IP
+ip.addr == 192.168.1.105
+
+# Show DNS queries
+dns.flags.response == 0
+```
+
+### tshark (command-line capture)
+
+```bash
+# Capture 100 packets on interface eth0
+tshark -i eth0 -c 100
+
+# Capture and save to a file
+tshark -i eth0 -w capture.pcapng
+
+# Read a saved capture and apply a display filter
+tshark -r capture.pcapng -Y "http.request"
+```

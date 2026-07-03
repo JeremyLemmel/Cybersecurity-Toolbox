@@ -7,6 +7,13 @@
 
 Burp Suite is the leading toolkit for web application penetration testing. The Community edition is completely free and extremely powerful.
 
+Security professionals use Burp Suite daily for:
+
+- Manual web application penetration testing
+- Finding logic flaws and injection points automated scanners miss
+- Testing authentication and session management
+- Understanding what real exploitation attempts look like at the HTTP request level
+
 ## Core Tools Used
 - Proxy (intercept and modify requests)
 - Repeater

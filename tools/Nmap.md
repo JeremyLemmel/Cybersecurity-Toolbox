@@ -45,12 +45,40 @@ Security professionals use Nmap daily for:
 - NSE scripts are extremely powerful for vulnerability detection (e.g., http-vuln-cve2017-5638).
 - Aggressive scans can trigger security alerts, so they should only be used in authorized environments.
 
+## Hands-On Learning Path
+
+Nmap proficiency is built by scanning progressively more realistic targets — on infrastructure that's explicitly legal to test. Below is the progression most cybersecurity students and self-taught practitioners use to build reps. Checked items reflect scans actually completed in my own lab or against authorized public targets.
+
+**Public, legal-to-scan targets**
+-  `scanme.nmap.org` — Nmap's own official test target, safe for basic scan practice
+- TryHackMe "Nmap" and "Nmap: The Basics" rooms — guided, scored scanning exercises
+-  OverTheWire "Bandit" wargame — light recon practice as part of a broader CTF-style challenge
+
+**Home lab (VirtualBox / isolated network)**
+-  Basic host discovery scan across a private subnet (`192.168.1.0/24`)
+-  Service and version enumeration against a Metasploitable2 VM
+-  Aggressive scan (`-A`) combining OS detection, version detection, NSE, and traceroute
+-  Comparing SYN scan vs. Connect scan output/timing on the same target
+-  Writing a custom NSE-driven scan against a deliberately outdated service to confirm a known CVE
+
+**Applied / integration practice**
+-  Feeding Nmap XML output (`-oX`) into a parsing script to automate reporting
+-  Cross-referencing an Nmap scan against Wireshark capture of the same scan, to see both sides of the traffic
+
+
+
 ## Tips & Best Practices
 
 - Always get explicit permission before scanning any network you do not own.
 - Start with lighter scans before running aggressive ones.
 - Use -oX (XML output) when integrating with other tools.
 - Combine Nmap with tools like Nessus/OpenVAS for deeper vulnerability analysis.
+- Get explicit authorization first. Never scan a network or host you don't own or don't have written permission to test — unauthorized scanning can violate policy or law even when no harm is intended.
+- Match the scan to the goal. Use lighter, targeted scans (`-sV` on specific ports) when you know what you're looking for; reserve `-A` and full-range scans for situations where broad discovery is actually needed.
+- Consider timing and noise. Faster timing templates (`-T4`/`-T5`) increase detection risk and can affect network performance — default to a more conservative template on production or shared networks.
+- Always log your output. Save scans in multiple formats (`-oN`, `-oX`) so results can be reviewed, diffed against future scans, or fed into other tools.
+- Verify findings before acting on them. Nmap's OS/version detection is a best-guess based on fingerprinting — confirm anything critical before making a security decision based on it.
+
 
 ## Resources
 

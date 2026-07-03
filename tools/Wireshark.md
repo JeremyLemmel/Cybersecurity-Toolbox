@@ -14,6 +14,17 @@ Wireshark is the world’s most popular network protocol analyzer. It allows you
 - VoIP analysis, decryption support (SSL/TLS with key)
 - Rich visualization (IO graphs, conversations, endpoints)
 
+## What I Learned
+- How to quickly isolate relevant traffic using filters
+- Importance of understanding the TCP 3-way handshake
+- How sensitive data can be exposed if not properly encrypted
+
+## Resources
+- Official Documentation: https://www.wireshark.org/docs/
+- Wireshark Wiki & Sample Captures
+
+
+
 ## Common Filters & Commands
 
 ```bash

@@ -25,6 +25,19 @@ Security professionals use Nmap daily for:
 - Output in multiple formats (normal, XML, grepable)
 - Timing templates for stealth or speed
 
+## Hands-on Walkthrough Examples
+### Example 1: Basic Network Discovery
+I scanned my home lab network (192.168.1.0/24) to identify live hosts and services.
+(Insert screenshot: nmap basic scan results showing discovered hosts)
+### Example 2: Detailed Service Enumeration
+Scanned a vulnerable Metasploitable 2 VM with version detection and scripting.
+(Insert screenshot: nmap -sV -sC output showing open ports, service versions, and script results)
+### Example 3: Aggressive Scan
+Used nmap -A to gather OS, services, and traceroute information.
+(Insert screenshot: Aggressive scan results)
+
+
+
 ## What I Learned
 
 - The importance of choosing the right scan type based on the goal (speed vs. stealth vs. detail).

@@ -16,11 +16,13 @@ Security professionals use Wireshark daily for:
 - Learning and teaching how protocols actually behave on the wire
 
 ## Key Features
-- Deep inspection of hundreds of protocols
-- Powerful display filters
-- Live packet capture and offline analysis
-- VoIP analysis, decryption support (SSL/TLS with key)
-- Rich visualization (IO graphs, conversations, endpoints)
+- Live packet capture and offline analysis (`.pcap`/`.pcapng` files)
+- Capture filters (limit what's recorded) and display filters (narrow what's viewed)
+- Deep protocol dissection (HTTP, DNS, TCP/IP, ARP, DHCP, TLS, and hundreds more)
+- "Follow Stream" — reconstructing a full conversation from individual packets
+- Statistics tools (conversations, protocol hierarchy, I/O graphs)
+- Color-coding rules to visually flag traffic types or anomalies
+- `tshark` — the command-line version, for scripting and automation
 
 ## Hands-on Examples
 #### Example 1: Basic HTTP Traffic Analysis

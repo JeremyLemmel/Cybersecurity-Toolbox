@@ -7,6 +7,14 @@
 
 Wireshark is the world’s most popular network protocol analyzer. It allows you to capture and interactively browse traffic running on a computer network in real time.
 
+Security professionals use Wireshark daily for:
+
+- Incident investigation and forensic analysis
+- Malware traffic and command-and-control (C2) detection
+- Validating and enriching SIEM/IDS alerts with ground-truth packet data
+- Troubleshooting network performance and connectivity issues
+- Learning and teaching how protocols actually behave on the wire
+
 ## Key Features
 - Deep inspection of hundreds of protocols
 - Powerful display filters

@@ -14,6 +14,18 @@ Wireshark is the world’s most popular network protocol analyzer. It allows you
 - VoIP analysis, decryption support (SSL/TLS with key)
 - Rich visualization (IO graphs, conversations, endpoints)
 
+## Hands-on Examples
+#### Example 1: Basic HTTP Traffic Analysis
+- Captured traffic while browsing a website and analyzed HTTP requests/responses.
+- (Insert screenshot: Wireshark showing HTTP packets with request details)
+#### Example 2: DNS Query Analysis
+- Filtered DNS traffic to observe domain resolution.
+- (Insert screenshot: DNS filter results)
+#### Example 3: Following TCP Streams
+- Used "Follow → TCP Stream" to reconstruct a full conversation.
+
+
+
 ## What I Learned
 - How to quickly isolate relevant traffic using filters
 - Importance of understanding the TCP 3-way handshake

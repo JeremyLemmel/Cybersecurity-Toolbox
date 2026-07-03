@@ -2,7 +2,15 @@
 
 **Quick Reference for Network Scanning**
 
----
+## Core Workflow
+
+1. Host discovery (is it alive?)
+2. Port scan (what's open?)
+3. Service/version detection (what's running?)
+4. NSE scripts (any known issues?)
+5. Save output for reporting
+
+
 
 ## Basic Commands
 

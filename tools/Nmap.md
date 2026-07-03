@@ -37,3 +37,28 @@ nmap scanme.nmap.org
 # Scan a range / subnet
 nmap 192.168.1.1-255
 nmap 192.168.1.0/24
+
+# Version detection + default scripts
+nmap -sV -sC 192.168.1.105
+
+# Aggressive scan (OS, version, scripts, traceroute)
+nmap -A 192.168.1.105
+
+# Scan specific ports
+nmap -p 80,443,22,3389 target.com
+
+# Scan top 1000 ports (default) or all ports
+nmap -p- target.com          # All 65535 ports
+nmap --top-ports 100 target.com
+
+# SYN scan (stealthy, requires root)
+sudo nmap -sS 192.168.1.105
+
+# UDP scan (slower but important)
+sudo nmap -sU -p 53,123,161 target.com
+
+# Evade basic firewalls/IDS (fragmented packets)
+sudo nmap -f -T2 target.com
+
+# Save output in multiple formats
+nmap -A -oN scan.txt -oX scan.xml 192.168.1.0/24

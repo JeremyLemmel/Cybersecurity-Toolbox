@@ -37,6 +37,28 @@ Burp Suite is the leading toolkit for web application penetration testing. The C
 - The impact of improper input validation
 - Difference between manual and automated testing
 
+## Hands-On Learning Path
+
+Burp Suite proficiency is built through repetition against intentionally vulnerable, legal-to-attack targets. Below is the progression most cybersecurity students and self-taught practitioners use — the same one I'm working through. Checked items reflect labs actually completed; this list updates as real work is done.
+
+**PortSwigger Web Security Academy** *(free, built by the makers of Burp — the most widely used starting point)*
+-  SQL injection — retrieving hidden data via a login bypass
+-  Cross-site scripting (XSS) — reflected, stored, and DOM-based labs
+-  Authentication — username enumeration and password brute-forcing with Intruder
+-  Access control vulnerabilities — IDOR and privilege escalation labs
+-  Cross-site request forgery (CSRF) — bypassing basic CSRF token validation
+-  Business logic vulnerabilities — exploiting flawed application assumptions
+
+**OWASP Juice Shop** *(intentionally vulnerable app, gamified with a scoreboard)*
+-  Intercepting and modifying a request to manipulate a price or quantity
+-  Identifying and exploiting a broken access control challenge
+-  Using Repeater to test input validation on a form field
+
+**DVWA (Damn Vulnerable Web Application)** *(classic, security-level-adjustable practice target)*
+-  Low-security SQL injection via Burp's Repeater
+-  Command injection testing at increasing security levels
+-  Comparing how the same attack behaves at "low" vs. "high" security settings — a good way to see what real mitigations look like in practice
+
 ## Resources
 - PortSwigger Web Security Academy (Free training)
-- Burp Suite Documentation
+- Burp Suite Documentation https://portswigger.net/burp/documentation

@@ -15,10 +15,12 @@ Security professionals use Burp Suite daily for:
 - Understanding what real exploitation attempts look like at the HTTP request level
 
 ## Core Tools Used
-- Proxy (intercept and modify requests)
-- Repeater
-- Intruder
-- Site map / Target scope
+- **Proxy** — intercepts and lets you inspect/modify HTTP(S) traffic in real time
+- **Repeater** — resend a modified request repeatedly to test how the application responds
+- **Intruder** — automate sending requests with varying payloads (e.g., for fuzzing or parameter testing)
+- **Target/Scope** — defines what's in-bounds for testing to avoid touching out-of-scope systems
+- **Decoder** — encode/decode data (Base64, URL encoding, hashing) found in requests
+- **Extensions (BApp Store)** — add community-built tools for specialized testing
 
 ## Common Workflow
 

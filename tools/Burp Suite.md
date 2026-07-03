@@ -23,15 +23,14 @@ Burp Suite is the leading toolkit for web application penetration testing. The C
 ## Example Usage
 
 **Example 1: Intercepting and Modifying Requests**  
-Intercepted a login request and modified parameters.
-
-*(Insert screenshot: Burp Proxy intercepting a request)*
+- Intercepted a login request and modified parameters.
+- *(Insert screenshot: Burp Proxy intercepting a request)*
 
 **Example 2: SQL Injection Testing**  
-Used Repeater to test different payloads.
+- Used Repeater to test different payloads.
 
 **Example 3: Brute Force Attack**  
-Used Intruder with a wordlist against a login form (in lab only).
+- Used Intruder with a wordlist against a login form (in lab only).
 
 ## What I Learned
 - How modern web apps communicate behind the scenes

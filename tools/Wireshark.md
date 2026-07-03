@@ -72,8 +72,8 @@ Wireshark proficiency comes from reading real (or realistic) traffic, not memori
 
 ## Resources
 - Official Documentation: https://www.wireshark.org/docs/
-- Wireshark Wiki & Sample Captures
-
+- Wireshark Wiki & Sample Captures https://wiki.wireshark.org/SampleCaptures
+- Wireshark Display Filter Reference https://www.wireshark.org/docs/dfref/
 
 
 ## Common Filters & Commands

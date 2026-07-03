@@ -27,14 +27,14 @@ Security professionals use Nmap daily for:
 
 ## Hands-on Walkthrough Examples
 #### Example 1: Basic Network Discovery
-I scanned my home lab network (192.168.1.0/24) to identify live hosts and services.
-(Insert screenshot: nmap basic scan results showing discovered hosts)
+- I scanned my home lab network (192.168.1.0/24) to identify live hosts and services.
+- (Insert screenshot: nmap basic scan results showing discovered hosts)
 #### Example 2: Detailed Service Enumeration
-Scanned a vulnerable Metasploitable 2 VM with version detection and scripting.
-(Insert screenshot: nmap -sV -sC output showing open ports, service versions, and script results)
+- Scanned a vulnerable Metasploitable 2 VM with version detection and scripting.
+- (Insert screenshot: nmap -sV -sC output showing open ports, service versions, and script results)
 #### Example 3: Aggressive Scan
-Used nmap -A to gather OS, services, and traceroute information.
-(Insert screenshot: Aggressive scan results)
+- Used nmap -A to gather OS, services, and traceroute information.
+- (Insert screenshot: Aggressive scan results)
 
 
 

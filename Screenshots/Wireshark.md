@@ -9,7 +9,7 @@
 <img width="1540" height="929" alt="Screenshot 2026-07-08 135057" src="https://github.com/user-attachments/assets/5d74550c-6bc9-40e8-97d9-0c2180cf4089" />
 <img width="1542" height="930" alt="Screenshot 2026-07-08 135430" src="https://github.com/user-attachments/assets/a2ecd86c-f5cb-4714-96bd-020699c912a8" />
 <img width="1536" height="929" alt="Screenshot 2026-07-08 135537" src="https://github.com/user-attachments/assets/2d0ac265-526d-42b6-b646-052faf16b8f7" />
-<img width="1546" height="931" alt="Screenshot 2026-07-08 135655" src="https://github.com/user-attachments/assets/ae2d96d0-2cd3-48af-989d-b4c90d2d201f" />
+
 <img width="1542" height="929" alt="Screenshot 2026-07-08 135710" src="https://github.com/user-attachments/assets/266f3dc2-840e-46c3-902a-ef9ddb4502b0" />
 <img width="1540" height="931" alt="Screenshot 2026-07-08 135749" src="https://github.com/user-attachments/assets/25a68c55-543b-4e2c-958f-0a396af0d469" />
 <img width="1546" height="863" alt="Screenshot 2026-07-08 140114" src="https://github.com/user-attachments/assets/82f12e4b-f548-4d27-a0cd-dcb1de37ee06" />

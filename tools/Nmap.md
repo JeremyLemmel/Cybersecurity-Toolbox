@@ -1,3 +1,4 @@
+
 # Nmap - Network Mapper
 
 **Category:** Network Scanning & Discovery  
@@ -27,14 +28,16 @@ Security professionals use Nmap daily for:
 
 ## Hands-on Walkthrough Examples
 #### Example 1: Basic Network Discovery
-- I scanned my home lab network (192.168.1.0/24) to identify live hosts and services.
-- (Insert screenshot: nmap basic scan results showing discovered hosts)
+- I scanned my home lab network (10.0.2.0/24) to identify live hosts and services.
+ <img width="987" height="984" alt="Screenshot 2026-07-07 140317" src="https://github.com/user-attachments/assets/62e27ab9-3843-4db2-a7e7-6a8ff3686deb" />
+
 #### Example 2: Detailed Service Enumeration
 - Scanned a vulnerable Metasploitable 2 VM with version detection and scripting.
-- (Insert screenshot: nmap -sV -sC output showing open ports, service versions, and script results)
+ <img width="984" height="884" alt="Screenshot 2026-07-08 121330" src="https://github.com/user-attachments/assets/4f1afe91-77ce-457b-937f-2736596e141c" />
+
 #### Example 3: Aggressive Scan
 - Used nmap -A to gather OS, services, and traceroute information.
-- (Insert screenshot: Aggressive scan results)
+ <img width="1226" height="854" alt="Screenshot 2026-07-08 122851" src="https://github.com/user-attachments/assets/5bd1091d-c700-4c99-8dec-efc86282f78d" />
 
 
 
@@ -123,6 +126,11 @@ sudo nmap -f -T2 target.com
 
 # Save output in multiple formats
 nmap -A -oN scan.txt -oX scan.xml 192.168.1.0/24
+
+Note: All IP addresses have been changed for privacy reasons.
+
+
+
 
 
 

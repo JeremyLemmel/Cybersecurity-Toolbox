@@ -28,7 +28,7 @@ Security professionals use Nmap daily for:
 
 ## Hands-on Walkthrough Examples
 #### Example 1: Basic Network Discovery
-- I scanned my home lab network (10.0.2.0/24) to identify live hosts and services.
+- Scanned my home lab network (10.0.2.0/24) to identify live hosts and services.
  <img width="987" height="984" alt="Screenshot 2026-07-07 140317" src="https://github.com/user-attachments/assets/62e27ab9-3843-4db2-a7e7-6a8ff3686deb" />
 
 #### Example 2: Detailed Service Enumeration

@@ -27,12 +27,19 @@ Security professionals use Wireshark daily for:
 ## Hands-on Examples
 #### Example 1: Basic HTTP Traffic Analysis
 - Captured traffic while browsing a website and analyzed HTTP requests/responses.
-- (Insert screenshot: Wireshark showing HTTP packets with request details)
+  
+<img width="1395" height="906" alt="Screenshot 2026-07-08 130300" src="https://github.com/user-attachments/assets/168cbae2-9ef6-4ed6-8ce2-d4318ffae905" />
+
 #### Example 2: DNS Query Analysis
 - Filtered DNS traffic to observe domain resolution.
-- (Insert screenshot: DNS filter results)
+<img width="1540" height="925" alt="Screenshot 2026-07-08 134719" src="https://github.com/user-attachments/assets/466f000b-b281-4167-8464-c1e36986e73e" />
+
 #### Example 3: Following TCP Streams
 - Used "Follow → TCP Stream" to reconstruct a full conversation.
+<img width="1539" height="924" alt="Screenshot 2026-07-08 134909" src="https://github.com/user-attachments/assets/6933dd18-890d-43df-8493-cc28b3b25513" />
+<img width="1540" height="929" alt="Screenshot 2026-07-08 135057" src="https://github.com/user-attachments/assets/8af49a99-afa6-4a81-8055-8b8fb9f71514" />
+
+
 
 
 

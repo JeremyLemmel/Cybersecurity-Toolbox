@@ -96,6 +96,8 @@ tcp port 80
 
 # Capture traffic on a specific subnet
 net 192.168.1.0/24
+
+Note: All IP addresses have been changed for privacy reasons.
 ```
 
 ### Display Filters (applied after capture, in the GUI filter bar)
@@ -112,6 +114,8 @@ ip.addr == 192.168.1.105
 
 # Show DNS queries
 dns.flags.response == 0
+
+Note: All IP addresses have been changed for privacy reasons.
 ```
 
 ### tshark (command-line capture)
@@ -125,4 +129,6 @@ tshark -i eth0 -w capture.pcapng
 
 # Read a saved capture and apply a display filter
 tshark -r capture.pcapng -Y "http.request"
+
+Note: All IP addresses have been changed for privacy reasons.
 ```

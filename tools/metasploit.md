@@ -25,7 +25,7 @@ Security professionals use Metasploit daily for:
 
 ## Hands-on Examples
 ### Example 1: EternalBlue Exploit
-- Successfully exploited a vulnerable Windows machine using MS17-010 in a lab.
+- Gaining Access to Windows Server 2022 using Metasploit (SMB Delivery)
 - (Insert screenshot: Metasploit console showing successful exploit and Meterpreter session)
 ### Example 2: Post-Exploitation
 - Used Meterpreter to gather system information and escalate privileges.

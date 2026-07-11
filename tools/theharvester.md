@@ -1,3 +1,4 @@
+
 # theHarvester - OSINT Tool
 
 **Category:** Open Source Intelligence (OSINT)  
@@ -25,10 +26,18 @@ Security professionals use theHarvester daily for:
 ## Hands-on Examples
 #### Example 1: Recon on a Domain
 - Ran theHarvester against a test domain to gather emails and subdomains.
-- (Insert screenshot: theHarvester showing discovered emails and hosts)
+<img width="938" height="409" alt="Screenshot 2026-07-11 121323" src="https://github.com/user-attachments/assets/c2b3d30a-c2e5-4e8c-8643-c7a7a5191fc2" />
+<img width="1473" height="951" alt="Screenshot 2026-07-11 121350" src="https://github.com/user-attachments/assets/f65d5755-9b77-4679-8fb0-c7d8f727411c" />
+<img width="1334" height="856" alt="Screenshot 2026-07-11 121406" src="https://github.com/user-attachments/assets/28576a2b-2c45-4dcf-973f-ae339b787ab2" />
+<img width="1130" height="703" alt="Screenshot 2026-07-11 121425" src="https://github.com/user-attachments/assets/0a5349c5-7ebf-4f0a-afec-1ed3aa3bde43" />
+
+
 #### Example 2: Exporting Results
 - Exported findings to an HTML report for easier review.
-- (Insert screenshot: HTML output example)
+<img width="956" height="436" alt="Screenshot 2026-07-11 121447" src="https://github.com/user-attachments/assets/4e7f81c6-ca70-4fd9-a4ab-f5e39cfc7c43" />
+<img width="344" height="64" alt="Screenshot 2026-07-11 121608" src="https://github.com/user-attachments/assets/c038a580-2d73-4c02-aea5-89bcf9903483" />
+<img width="1123" height="1132" alt="Screenshot 2026-07-11 121647" src="https://github.com/user-attachments/assets/1392e105-2273-4396-8b99-d765ef690e8a" />
+
 
 ## What I Learned
 - A surprising amount of information is publicly available.

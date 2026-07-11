@@ -33,7 +33,6 @@ Security professionals use Burp Suite daily for:
 
 **Example 1: Intercepting and Modifying Requests**  
 - Intercepted a login request and modified parameters.
-- *(Insert screenshot: Burp Proxy intercepting a request)*
 
 **Example 2: SQL Injection Testing**  
 - Used Repeater to test different payloads.

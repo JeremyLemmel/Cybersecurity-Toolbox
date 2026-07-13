@@ -24,12 +24,20 @@ Security professionals use Metasploit daily for:
 - Post-exploitation modules for privilege escalation, persistence, and lateral movement
 
 ## Hands-on Examples
-### Example 1: EternalBlue Exploit
-- Gaining Access to Windows Server 2022 using Metasploit (SMB Delivery)
+### Example 1: Exploiting Metasploitable 2 using vsftpd Backdoor
+- Successfully exploited a vulnerable FTP service (vsftpd 2.3.4) on Metasploitable 2 using Metasploit to gain root access.
 - (Insert screenshot: Metasploit console showing successful exploit and Meterpreter session)
-### Example 2: Post-Exploitation
-- Used Meterpreter to gather system information and escalate privileges.
-- (Insert screenshot: Meterpreter commands and output)
+### Example 2: Post-Exploitation with Meterpreter
+- After gaining initial root access via vsftpd backdoor on Metasploitable 2, upgraded the shell to a Meterpreter session.
+- Performed reconnaissance and demonstrated post-exploitation capabilities.
+
+  
+**Key Commands Used:**
+- `sysinfo` — Gathered target system details
+- `getuid` — Confirmed root privileges
+- `hashdump` — Attempted to dump password hashes
+- `screenshot` — Captured target screen
+
 
 ## What I Learned
 - Proper use of payloads and listeners is critical.

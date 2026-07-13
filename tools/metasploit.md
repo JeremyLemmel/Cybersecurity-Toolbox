@@ -39,6 +39,16 @@ Security professionals use Metasploit daily for:
 <img width="499" height="159" alt="Screenshot 2026-07-13 125340" src="https://github.com/user-attachments/assets/38386fae-6898-4ce2-a69a-4b157b544eaa" />
 
 <img width="233" height="53" alt="Screenshot 2026-07-13 125356" src="https://github.com/user-attachments/assets/689e0415-0175-4c6f-82e4-f81b4e8b3c7a" />
+
+## Demonstrating Control on the Target Machine:
+
+- Dropped into a system shell using the shell command in Meterpreter.
+- Created a proof-of-compromise file on the target.
+
+<img width="438" height="115" alt="Screenshot 2026-07-13 133026" src="https://github.com/user-attachments/assets/d307cd16-5284-442f-93fc-9caaed8bcafb" />
+<img width="645" height="132" alt="Screenshot 2026-07-13 133146" src="https://github.com/user-attachments/assets/156a8703-5bb0-4e6e-bb8a-b99e13a51426" />
+
+
   
 **Key Commands Used:**
 - sysinfo — Gathered target system details (OS, architecture, hostname, etc.)

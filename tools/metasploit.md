@@ -26,7 +26,10 @@ Security professionals use Metasploit daily for:
 ## Hands-on Examples
 ### Example 1: Exploiting Metasploitable 2 using vsftpd Backdoor
 - Successfully exploited a vulnerable FTP service (vsftpd 2.3.4) on Metasploitable 2 using Metasploit to gain root access.
-- (Insert screenshot: Metasploit console showing successful exploit and Meterpreter session)
+
+
+
+<img width="927" height="196" alt="Screenshot 2026-07-13 125316" src="https://github.com/user-attachments/assets/4c94101e-5eb1-4c1a-ab48-5854d0fd7b0a" />
 ### Example 2: Post-Exploitation with Meterpreter
 - After gaining initial root access via vsftpd backdoor on Metasploitable 2, upgraded the shell to a Meterpreter session.
 - Performed reconnaissance and demonstrated post-exploitation capabilities.

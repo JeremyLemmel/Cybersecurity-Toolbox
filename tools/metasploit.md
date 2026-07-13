@@ -30,17 +30,24 @@ Security professionals use Metasploit daily for:
 
 
 <img width="927" height="196" alt="Screenshot 2026-07-13 125316" src="https://github.com/user-attachments/assets/4c94101e-5eb1-4c1a-ab48-5854d0fd7b0a" />
+
+
 ### Example 2: Post-Exploitation with Meterpreter
 - After gaining initial root access via vsftpd backdoor on Metasploitable 2, upgraded the shell to a Meterpreter session.
 - Performed reconnaissance and demonstrated post-exploitation capabilities.
 
+<img width="499" height="159" alt="Screenshot 2026-07-13 125340" src="https://github.com/user-attachments/assets/38386fae-6898-4ce2-a69a-4b157b544eaa" />
+
+<img width="233" height="53" alt="Screenshot 2026-07-13 125356" src="https://github.com/user-attachments/assets/689e0415-0175-4c6f-82e4-f81b4e8b3c7a" />
   
 **Key Commands Used:**
-- `sysinfo` — Gathered target system details
-- `getuid` — Confirmed root privileges
-- `hashdump` — Attempted to dump password hashes
-- `screenshot` — Captured target screen
-
+- sysinfo — Gathered target system details (OS, architecture, hostname, etc.)
+- getuid — Confirmed root privileges (uid=0(root))
+- whoami — Showed the current user context
+- pwd — Displayed the current working directory
+- ls — Listed files in the current directory
+- ls /etc — Explored system configuration files
+- ifconfig — Showed network interfaces and IP addresses
 
 ## What I Learned
 - Proper use of payloads and listeners is critical.

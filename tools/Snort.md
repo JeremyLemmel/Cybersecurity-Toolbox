@@ -41,9 +41,10 @@ Security professionals use Snort for:
 - Differences between detection and prevention
 
 ## Hands-On Learning Path
-- Running Snort while performing scans and exploits against Metasploitable
-- Writing custom rules for common attacks (Nmap, brute force, etc.)
-- Comparing default rules vs custom rules
+- Configured NAT networking between Windows Server 2022 and Kali Linux
+- Installed and ran Snort in IDS mode
+- Simulated network scanning with Angry IP Scanner
+- Analyzed Snort output and statistics
 
 ## Resources
 - Snort Official Documentation: https://www.snort.org/documents

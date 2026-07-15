@@ -37,11 +37,13 @@ Security professionals use Snort for:
 
 **Example 2: Detecting Network Scanning**  
 - Ran Snort while performing a network scan using Angry IP Scanner from Windows Server 2022. Successfully detected scanning activity.
+- Successfully detected scanning activity (mainly ARP requests and port scan behavior).
 <img width="799" height="522" alt="Screenshot 2026-07-15 121828" src="https://github.com/user-attachments/assets/a14d5da6-0cb1-438f-8e27-3aab4cfc8a55" />
 
 
 **Example 3: Alert Analysis**  
 - Stopped Snort after scanning activity and analyzed Packet Statistics, Module Statistics, and AppID Statistics to understand detected traffic.
+- Observed 4094 packets analyzed, with 3861 ARP packets and 233 packets flagged under port_scan module.
 
 <img width="509" height="498" alt="Screenshot 2026-07-15 121734" src="https://github.com/user-attachments/assets/c6f259e7-d737-4fef-9905-eb61cad74579" />
 <img width="451" height="792" alt="Screenshot 2026-07-15 121803" src="https://github.com/user-attachments/assets/b97c876f-5a79-47e5-9c6a-2f5ab2c883b0" />
@@ -56,9 +58,9 @@ Security professionals use Snort for:
 
 ## Hands-On Learning Path
 - Configured NAT networking between Windows Server 2022 and Kali Linux
-- Installed and ran Snort in IDS mode
-- Simulated network scanning with Angry IP Scanner
-- Analyzed Snort output and statistics
+- Installed and started Snort in IDS mode (`sudo snort -c /etc/snort/snort.lua -i eth1`)
+- Simulated a network scan using Angry IP Scanner
+- Analyzed Snort statistics (Packet Statistics, Module Statistics, etc.)
 
 ## Resources
 - Snort Official Documentation: https://www.snort.org/documents

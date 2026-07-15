@@ -26,13 +26,13 @@ Security professionals use Snort for:
 
 ## Example Usage
 **Example 1: Basic IDS Monitoring**  
-- Configured Snort and successfully detected Nmap scans and Metasploit activity.
+- Configured Snort on Kali Linux and monitored network traffic in real time.
 
-**Example 2: Custom Rule Creation**  
-- Wrote and tested custom Snort rules to detect specific attack patterns.
+**Example 2: Detecting Network Scanning**  
+- Ran Snort while performing a network scan using Angry IP Scanner from Windows Server 2022. Successfully detected scanning activity.
 
 **Example 3: Alert Analysis**  
-- Generated malicious traffic and analyzed Snort’s real-time alerts and log files.
+- Stopped Snort after scanning activity and analyzed Packet Statistics, Module Statistics, and AppID Statistics to understand detected traffic.
 
 ## What I Learned
 - How intrusion detection systems work in practice

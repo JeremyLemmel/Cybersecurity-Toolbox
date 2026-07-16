@@ -24,14 +24,21 @@ Security professionals and researchers use Scapy for:
 4. Analyze responses and build attack scripts
 
 ## Example Usage
-**Example 1: ARP Spoofing (Man-in-the-Middle)**  
-- Created a basic ARP Spoofer to intercept traffic between two devices in the lab.
 
-**Example 2: Custom Host Discovery**  
-- Built a Python script using Scapy to scan for live hosts on the network.
+**Example 1: ARP Spoofing (Man-in-the-Middle)**
+- Created a Python script using Scapy to perform ARP Spoofing.
+- Successfully intercepted traffic between Kali Linux and target machines (Windows Server 2022 / Metasploitable).
+- Verified using `arp -a` on the target and Wireshark (seeing gratuitous ARP replies).
 
-**Example 3: DNS Query Manipulation**  
-- Manually crafted and sent custom DNS packets to test DNS behavior.
+**Example 2: Custom Host Discovery**
+- Built a Python script using Scapy to scan for live hosts on the local network (`10.0.2.0/24`).
+- Used ARP requests to discover active devices.
+
+**Example 3: DNS Query Manipulation**
+- Manually crafted and sent a custom DNS query packet for `google.com` using Scapy.
+- Received and parsed the DNS response showing resolved IP addresses.
+- Demonstrated low-level packet crafting and protocol understanding.
+
 
 ## What I Learned
 - Deep understanding of how network protocols function at the packet level

@@ -27,7 +27,7 @@ Security professionals and researchers use Scapy for:
 
 **Example 1: ARP Spoofing (Man-in-the-Middle)**
 - Created a Python script using Scapy to perform ARP Spoofing.
-- Successfully intercepted traffic between Kali Linux and target machines (Windows Server 2022 / Metasploitable).
+- Successfully intercepted traffic between Kali Linux and target machines (Metasploitable).
 - Verified using `arp -a` on the target and Wireshark (seeing gratuitous ARP replies).
 
 **Example 2: Custom Host Discovery**
